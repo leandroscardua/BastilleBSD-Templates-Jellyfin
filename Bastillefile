@@ -4,4 +4,4 @@ CMD wget https://github.com/Servarr/dotnet-bsd/releases/download/v6.0.5-125/dotn
 CMD wget https://repo.jellyfin.org/releases/server/portable/stable/combined/jellyfin_10.7.7.tar.gz
 CMD tar xf dotnet-runtime-6.0.5-freebsd-x64.tar.gz -C /usr/local/bin/
 CMD tar xf dotnet-sdk-6.0.300-freebsd-x64.tar.gz -C /usr/local/bin/
-CMD tar xf jellyfin_10.7.7_amd64.tar.gz -C /usr/local/share
+CMD tar xf jellyfin_10.7.7.tar.gz -C /usr/local/share
