@@ -1,4 +1,4 @@
-PKG wget
+PKG autoconf libtool automake cmake llvm10 krb5 terminfo-db libunwind icu libinotify python3 pkgconf binutils npm-node14 node14 openjdk11 bash git wget
 CMD wget https://github.com/Servarr/dotnet-bsd/releases/download/v6.0.5-125/dotnet-runtime-6.0.5-freebsd-x64.tar.gz
 CMD wget https://github.com/Servarr/dotnet-bsd/releases/download/v6.0.5-125/dotnet-sdk-6.0.300-freebsd-x64.tar.gz
 CMD wget https://repo.jellyfin.org/releases/server/portable/stable/combined/jellyfin_10.7.7.tar.gz
