@@ -1,4 +1,5 @@
-CMD fetch https://github.com/Thefrank/jellyfin-server-freebsd/releases/download/v10.8.9/jellyfinserver-10.8.9.pkg
-CMD pkg install jellyfinserver-10.8.9.pkg
+ARG version="10.8.9"
+CMD fetch https://github.com/Thefrank/jellyfin-server-freebsd/releases/download/v"${version}"/jellyfinserver-"${version}".pkg
+CMD pkg install jellyfinserver-"${version}".pkg
 SYSRC jellyfinserver_enable=TRUE
 SERVICE jellyfinserver start
