@@ -1,6 +1,6 @@
 ARG version="10.8.9"
-ARG mount_jail="/tmp"
-ARG mount_host="/tmp"
+ARG mount_jail="/torrent"
+ARG mount_host="/torrent"
 CONFIG set allow.mlock=1;
 CONFIG set ip6=inherit;
 RESTART
