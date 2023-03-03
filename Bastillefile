@@ -1,7 +1,10 @@
 ARG version="10.8.9"
+ARG mount_jail="/tmp"
+ARG mount_host="/tmp"
 CONFIG set allow.mlock=1;
 CONFIG set ip6=inherit;
 RESTART
+MOUNT "${mount_host}" "${mount_jail}" nullfs ro 0 0
 CMD fetch https://github.com/Thefrank/jellyfin-server-freebsd/releases/download/v"${version}"/jellyfinserver-"${version}".pkg
 CMD pkg install -y jellyfinserver-"${version}".pkg
 SYSRC jellyfinserver_enable=TRUE
