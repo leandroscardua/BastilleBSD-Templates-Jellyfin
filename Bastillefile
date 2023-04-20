@@ -8,6 +8,6 @@ RESTART
 #MOUNT "${mount_host}" "${mount_jail}" nullfs ro 0 0
 #CMD fetch https://github.com/Thefrank/jellyfin-server-freebsd/releases/download/v"${version}"/jellyfinserver-"${version}".pkg
 #CMD pkg install -y jellyfinserver-"${version}".pkg
-PKG install jellyfin
+PKG jellyfin
 SYSRC jellyfin_enable=TRUE
 SERVICE jellyfin start
