@@ -1,11 +1,13 @@
-ARG version="10.8.9"
-ARG mount_jail="/torrent"
-ARG mount_host="/torrent"
+CMD mkdir -p /usr/local/etc/pkg/repos
+CMD echo 'FreeBSD: { url: "pkg+http://pkg.FreeBSD.org/${ABI}/latest" }' > /usr/local/etc/pkg/repos/FreeBSD.conf
+#ARG mount_jail="/torrent"
+#ARG mount_host="/torrent"
 CONFIG set allow.mlock=1;
 CONFIG set ip6=inherit;
 RESTART
-MOUNT "${mount_host}" "${mount_jail}" nullfs ro 0 0
-CMD fetch https://github.com/Thefrank/jellyfin-server-freebsd/releases/download/v"${version}"/jellyfinserver-"${version}".pkg
-CMD pkg install -y jellyfinserver-"${version}".pkg
-SYSRC jellyfinserver_enable=TRUE
-SERVICE jellyfinserver start
+#MOUNT "${mount_host}" "${mount_jail}" nullfs ro 0 0
+#CMD fetch https://github.com/Thefrank/jellyfin-server-freebsd/releases/download/v"${version}"/jellyfinserver-"${version}".pkg
+#CMD pkg install -y jellyfinserver-"${version}".pkg
+PKG install jellyfin
+SYSRC jellyfin_enable=TRUE
+SERVICE jellyfin start
